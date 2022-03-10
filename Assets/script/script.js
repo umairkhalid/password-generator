@@ -27,7 +27,7 @@ function generatePassword() {
   passLength = parseInt(passLength);
 
   // Validating the appropriate lenght entered and not blank
-  while (isNaN(passLength) || passLength < 8 || passLength > 128) {
+  if (isNaN(passLength) || passLength < 8 || passLength > 128) {
     alert('Please select the appropriate length of password!');
     return generatePassword();
   }
